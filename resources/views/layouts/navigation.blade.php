@@ -26,15 +26,6 @@
                         <a class="cursor-pointer flex items-center gap-4">
                         <h5>{{ __('Servicios') }}</h5>
                         </a>
-                        <ul class="flex flex-col gap-4 py-4 text-center">
-                            @foreach ($services as $service)
-                                <li>
-                                    <a href="{{ route('service.view', $service->slug) }}">
-                                        <span>{{ $service->name }}</span>
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -139,13 +130,7 @@
                     x-cloak
                     class="dropdown"
                 >
-                    @foreach ($services as $service)
-                        <li class="py-lang-navbar-item" >
-                            <a href="{{ route('service.view', $service->slug) }}">
-                                <span class="text-xs">{{ $service->name }}</span>
-                            </a>
-                        </li>
-                    @endforeach
+                    
                 </ul>
             </li>
             <li>
