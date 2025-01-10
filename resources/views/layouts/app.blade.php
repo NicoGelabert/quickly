@@ -80,7 +80,7 @@
             </div>
             <!--/ Toast -->
             @include('layouts.navigation')
-            <main class="w-full mx-auto container">
+            <main class="w-full mx-auto">
                 {{ $slot }}
             </main>
             

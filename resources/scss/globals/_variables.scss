@@ -1,23 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
 /* Fonts */
-$primary-font: "Anton", sans-serif;
-$secondary-font: "Noto Serif", sans-serif;
-$body-font: "Inter", sans-serif;
+$primary-font: "Sen", sans-serif;
+$body-font: "Sen", sans-serif;
 
 a{
     @apply hover:text-primary;
 }
 .logo svg{
     @apply h-auto w-32 transition-all;
-}
-.demo-logo .logo_letters,
-.demo-logo-hamburguer .logo_letters{
-    @apply fill-black dark:fill-demo_white;
-}
-.demo-logo .logo_squares,
-.demo-logo-hamburguer .logo_squares{
-    @apply fill-demo_primary;
 }
 // nav{
 //     .logo{
@@ -124,9 +115,9 @@ header, .mobile-menu{
 }
 // línea divisoria
 .divider{ 
-    @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-30 dark:via-white my-16;
+    @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-30 dark:via-white;
 }
 // Social icons
 .social-icons a{
-    @apply aspect-square rounded-md flex justify-center items-center ring-1 text-black/70 bg-black/5 ring-black/20 hover:bg-primary hover:text-white hover:ring-primary_darker transition-all dark:text-white/50 dark:bg-white/5 dark:ring-white/20 dark:hover:bg-primary dark:hover:text-white dark:hover:ring-primary_darker;
+    @apply aspect-square rounded-md flex justify-center items-center ring-1 text-black/70 bg-black/5 ring-black/20 hover:bg-primary hover:text-white hover:ring-primary transition-all dark:text-white/50 dark:bg-white/5 dark:ring-white/20 dark:hover:bg-primary dark:hover:text-white dark:hover:ring-primary;
 }

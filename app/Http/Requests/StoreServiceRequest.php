@@ -23,12 +23,12 @@ class StoreServiceRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string'],
-            'icon' => ['required', 'string'],
+            'icon' => ['nullable', 'string'],
             'active' => ['required', 'boolean'],
-            'short_description' => ['required', 'string'],
-            'description' => ['required', 'string'],
-            'attributes' => ['required', 'array'],
-            'attributes.*.text' => ['required', 'string', 'min:0.01'],
+            'short_description' => ['nullable', 'string'],
+            'description' => ['nullable', 'string'],
+            'attributes' => ['nullable', 'array'],
+            'attributes.*.text' => ['nullable', 'string', 'min:0.01'],
             'image' => ['required', 'image'],
             'parent_id' => ['nullable', 'exists:categories,id'],
         ];

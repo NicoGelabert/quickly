@@ -4,11 +4,14 @@
         cartItemsCount: {{ \App\Helpers\Cart::getCartItemsCount() }},
     }"
     @cart-change.window="cartItemsCount = $event.detail.count"
-    class="flex justify-between md:justify-center z-10 w-full"
+    class="flex justify-between md:justify-center z-10 w-full px-4 md:px-0"
     id="navbar"
 >
-    <div class="logo flex items-center ml-4 md:hidden">
+    <div class="logo flex items-center md:hidden">
         <x-application-logo/>
+    </div>
+    <div>
+        <x-button class="btn btn-urgencies md:hidden">urgencias <x-icons.urgencies /></x-button>
     </div>
 
     <!-- Responsive Menu -->
@@ -41,13 +44,16 @@
     </div>
     <!--/ Responsive Menu -->
 
-    <nav class="hidden md:flex w-full container mx-4 justify-between items-center">
+    <nav class="hidden md:flex w-full container mx-4 sm:mx-0 justify-between items-center">
         <div class="logo flex justify-center">
             <x-application-logo/>
         </div>
-        <ul class="grid grid-flow-col items-center justify-end gap-4">
+        <div>
+        <x-button class="btn btn-urgencies">urgencias <x-icons.urgencies /></x-button>
+        </div>
+        <!-- <ul class="grid grid-flow-col items-center justify-end gap-4"> -->
             <!-- Idiomas -->
-            <li x-data="{open: false}" class="relative">
+            <!-- <li x-data="{open: false}" class="relative">
                 <a
                     @click="open = !open"
                     class="cursor-pointer flex items-center px-navbar-item pr-5  "
@@ -86,10 +92,10 @@
                         @endif
                     @endforeach
                 </ul>
-            </li>
+            </li> -->
 
             <!-- Tema -->
-            <li>
+            <!-- <li>
                 <div class="relative flex gap-2 items-center">
                     <button class="toggle-theme relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                         <div class="flex justify-between w-full px-1 pt-px">
@@ -100,10 +106,10 @@
                         <span class="indicator absolute left-0 inline-block w-5 h-5 bg-white rounded-full shadow-sm transition-transform"></span>
                     </button>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Servicios -->
-            <li x-data="{open: false}" class="relative">
+            <!-- <li x-data="{open: false}" class="relative">
                 <a
                     @click="open = !open"
                     :class="{'w-full': open}"
@@ -142,11 +148,11 @@
                         <i class="flex text-base leading-none fi fi-brands-instagram"></i>
                     </a>
                 </div>
-            </li>
-        </ul>
+            </li> -->
+        <!-- </ul> -->
     </nav>
-
-    <div class="flex items-center md:hidden">
+    <!-- INICIO MOBILE MENU -->
+    <!-- <div class="flex items-center md:hidden">
         <div x-data="{open: false}" class="relative">
             <a
                 @click="open = !open"
@@ -186,8 +192,8 @@
                     @endif
                 @endforeach
             </ul>
-        </div>
-        <div class="relative flex gap-2 items-center">
+        </div> -->
+        <!-- <div class="relative flex gap-2 items-center">
             <button class="toggle-theme relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                 <div class="flex justify-between w-full px-1 pt-px">
                     <i class="fi fi-rr-sun text-transparent dark:text-white"></i>
@@ -198,7 +204,8 @@
             </button>
         </div>
         <x-hamburguer />
-    </div>
+    </div> -->
+    <!-- FIN MOBILE MENU -->
 </header>
 
 <script>

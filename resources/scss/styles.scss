@@ -1,21 +1,19 @@
 @use './globals' as *;
-@use './demo' as *;
 @use './animations/animations' as *;
 
 html {
     scroll-behavior: smooth;
   }
 body{
-    @apply bg-white text-black dark:bg-black dark:text-white;
-    font-family: $secondary-font;
+    @apply bg-white text-gray_900;
     h1, h2, h3, h4, h5, h6{
-        font-family: $primary-font;
+        @apply font-bold
     }
     h1{
-        @apply text-5xl leading-tight lg:text-6xl lg:leading-tight;
+        @apply text-mobile_h1 sm:text-tablet_h1 md:text-desktop_h1;
     }
     h2{
-        @apply text-5xl;
+        @apply text-mobile_h2 sm:text-tablet_h2 md:text-5xl;
     }
     h3{
         @apply text-4xl;
@@ -31,5 +29,8 @@ body{
     }
     p{
         @apply text-base;
+    }
+    .mobile_text_large{
+        @apply font-medium;
     }
 }

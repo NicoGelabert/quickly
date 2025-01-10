@@ -4,6 +4,8 @@
     
     <hr class="divider" id="contact" />
 
+    <x-services :services="$services" />
+
     <x-contact />
     
 </x-app-layout>
