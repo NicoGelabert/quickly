@@ -42,6 +42,9 @@ export default {
                 desktop_h1          : '4rem',
                 mobile_h2           : '2rem',
                 tablet_h2           : '2.5rem',
+                mobile_h3           : '1.75rem',
+                tablet_h3           : '2rem',
+                desktop_h3          : '2.5rem',
                 xxs: '0.6rem',
             },
             boxShadow: {

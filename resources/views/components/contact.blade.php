@@ -1,67 +1,58 @@
-<div class="mb-16 flex flex-col md:flex-row items-start gap-16" id="contact">
-    <div class="w-full flex flex-col md:w-1/2 gap-8">
-        <div class="flex justify-between items-start">
-            <div class="hidden md:flex h-fit vertical-text">
-                <h2 class="text-center">Contacto</h2>
+<div class="flex" id="contact">
+    <div class="container py-12 sm:w-1/2 bg-primary_light">
+        <div class="max-w-2xl m-auto flex flex-col gap-6">
+            <div class="flex flex-col gap-6">
+                <h3>H3 - Headline</h3>
+                <p class="mobile_text_large">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="block md:hidden">
-                <h2 class="text-left">Contacto</h2>
+            <form id="contactForm" action="{{ route('contact.store') }}" method="post" class="form">
+                @csrf
+                <div class="flex flex-col gap-6 w-full">
+                    <input id="nameInput" type="text" name="name" placeholder="Su nombre" required>
+                    <input id="emailInput" type="email" name="email" placeholder="Su correo electrónico" required>
+                    <input id="phoneInput" type="tel" name="phone" placeholder="Su teléfono" required pattern="[0-9]{9}">
+                    <select id="serviceInput" name="service" required>
+                        <option value="">¿Qué necesita?</option>
+                        <option value="Cerrajería">Cerrajería</option>
+                        <option value="Electricidad">Electricidad</option>
+                        <option value="Fontanería">Fontanería</option>
+                        <option value="Persianas">Persianas</option>
+                    </select>
+                    
+                    <!-- Casilla de verificación para Términos y Política -->
+                    <div class="flex items-start gap-2">
+                        <input type="checkbox" id="termsCheckbox" name="terms" required>
+                        <label for="termsCheckbox" class="text-sm">
+                            He leído y acepto los 
+                            <a href="/terminos-y-condiciones" target="_blank" class="underline">Términos y Condiciones</a> y la 
+                            <a href="/politica-de-privacidad" target="_blank" class="underline">Política de Privacidad</a>.
+                        </label>
+                    </div>
+    
+                    <div class="g-recaptcha" data-sitekey="6LfVW4kqAAAAAEdYw7ib6b04hXWw1e5IC2HBqsSR"></div>
+    
+                    <x-button class="btn btn-primary" id="subscribeBtn" type="submit" disabled>enviar <x-icons.send /></x-button>
+    
+                    <div id="loader_container" class="loader_container hidden_loader">
+                        <div class="form_loader">
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <span>{{__('Enviando...')}}</span>
+                    </div>
+                </div>
+            </form>
+            <div id="successMessage" class="mx-auto" style="display: none;">
+                <h4 class="text-center">Mensaje Enviado!</h4>
+                <img src="{{ asset('storage/common/mensaje-enviado.gif')}}" alt="Mensaje enviado">
             </div>
-            <i class="fi fi-br-arrow-up-left text-4xl overflow-hidden -rotate-90"></i>
-        </div>
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-            <p class="text-left text-2xl">Si tiene más consultas, no dude en ponerse en contacto con nosotros. </p>
-            <x-social-icons class="md:flex-col" />
+            <div id="errorMessage" class="mx-auto" style="display: none;">
+                El envío falló. Vuelva a intentar, por favor.
+            </div>
         </div>
     </div>
-    <div class="flex flex-col w-full md:w-1/2">
-        <form id="contactForm" action="{{ route('contact.store') }}" method="post" class="flex gap-2 w-full form">
-            @csrf
-            <div class="flex flex-col gap-6 w-full">
-                <input id="nameInput" type="text" name="name" placeholder="Su nombre" required>
-                <input id="emailInput" type="email" name="email" placeholder="Su correo electrónico" required>
-                <input id="phoneInput" type="tel" name="phone" placeholder="Su teléfono" required pattern="[0-9]{9}">
-                <select id="serviceInput" name="service" required>
-                    <option value="">¿Qué necesita?</option>
-                    <option value="Diseño web">Diseño web</option>
-                    <option value="Diseño gráfico">Diseño gráfico</option>
-                    <option value="Branding">Branding</option>
-                </select>
-                <textarea id="messageInput" name="message" placeholder="Déjenos un mensaje" rows="4" required></textarea>
-                
-                <!-- Casilla de verificación para Términos y Política -->
-                <div class="flex items-start gap-2">
-                    <input type="checkbox" id="termsCheckbox" name="terms" required>
-                    <label for="termsCheckbox" class="text-sm">
-                        He leído y acepto los 
-                        <a href="/terminos-y-condiciones" target="_blank" class="underline">Términos y Condiciones</a> y la 
-                        <a href="/politica-de-privacidad" target="_blank" class="underline">Política de Privacidad</a>.
-                    </label>
-                </div>
-
-                <div class="g-recaptcha" data-sitekey="6LfVW4kqAAAAAEdYw7ib6b04hXWw1e5IC2HBqsSR"></div>
-
-                <x-button id="subscribeBtn" type="submit" disabled>
-                    <i class="fi fi-rr-arrow-right arrow-to-right"></i>
-                    <span>{{__('Enviar')}}</span>
-                </x-button>
-
-                <div id="loader_container" class="loader_container hidden_loader">
-                    <div class="form_loader">
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <span>{{__('Enviando...')}}</span>
-                </div>
-            </div>
-        </form>
-        <div id="successMessage" class="mx-auto" style="display: none;">
-            <h4 class="text-center">Mensaje Enviado!</h4>
-            <img src="{{ asset('storage/common/mensaje-enviado.gif')}}" alt="Mensaje enviado">
-        </div>
-        <div id="errorMessage" class="mx-auto" style="display: none;">
-            El envío falló. Vuelva a intentar, por favor.
-        </div>
+    <div class="hidden sm:block sm:w-1/2">
+        <img class="h-full w-auto object-cover" src="{{ asset('storage/common/shaking_hands.jpg')}}">
     </div>
 </div>
 

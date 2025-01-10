@@ -16,7 +16,7 @@ body{
         @apply text-mobile_h2 sm:text-tablet_h2 md:text-5xl;
     }
     h3{
-        @apply text-4xl;
+        @apply text-mobile_h3 sm:text-tablet_h3 md:text-desktop_h3;
     }
     h4{
         @apply text-4xl;
