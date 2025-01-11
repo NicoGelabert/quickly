@@ -1,4 +1,4 @@
-<div class="container py-12 flex flex-col sm:flex-row-reverse gap-6 items-center" id="services">
+<div class="container py-12 lg:py-24 flex flex-col sm:flex-row-reverse gap-6 items-center" id="services">
     <div class="flex flex-col gap-6 sm:w-1/2">
         <h2>H2 - Headline</h2>
         <p class="mobile_text_large">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

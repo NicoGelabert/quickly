@@ -11,7 +11,7 @@
         <x-application-logo/>
     </div>
     <div>
-        <x-button class="btn btn-urgencies md:hidden">urgencias <x-icons.urgencies /></x-button>
+        <x-button href="#contact" class="btn btn-urgencies md:hidden">urgencias <x-icons.urgencies /></x-button>
     </div>
 
     <!-- Responsive Menu -->
@@ -49,7 +49,7 @@
             <x-application-logo/>
         </div>
         <div>
-        <x-button class="btn btn-urgencies">urgencias <x-icons.urgencies /></x-button>
+        <x-button class="btn btn-urgencies" href="#contact">urgencias <x-icons.urgencies /></x-button>
         </div>
         <!-- <ul class="grid grid-flow-col items-center justify-end gap-4"> -->
             <!-- Idiomas -->

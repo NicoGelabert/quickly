@@ -1,16 +1,5 @@
-<div class="flex flex-col gap-8 items-center">
-    <div class="pretitle ">
-        <p>Cómo trabajamos</p>
-    </div>
-    <h3 class="text-center">Convertimos sus ideas en realidad con un diseño gráfico y web único</h3>
-    <div class="flex flex-col md:flex-row pt-12 gap-12">
-        @foreach ($features as $feature)
-            <div class="flex flex-col items-center justify-between gap-8 text-center w-full md:w-1/3">
-                <i class="text-4xl {{ $feature->image }} text-primary   "></i>
-                <h4 class="">{{ $feature->title }}</h4>
-                <p>{{ $feature->description }}</p>
-                <button>Ver más</button>
-            </div>
-        @endforeach
-    </div>
+<div class="container py-12 lg:py-24 flex flex-col items-center gap-6">
+    <h3>H3 - Headline</h3>
+    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <x-button class="btn btn-primary w-auto" id="subscribeBtn" type="submit" disabled>llamar <x-icons.call /></x-button>
 </div>

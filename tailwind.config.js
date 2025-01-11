@@ -18,6 +18,7 @@ export default {
             },
             colors: {
                 primary             : '#EE7828',
+                primary_hover       : '#D95A03',
                 primary_light       : '#FEFBF9',
                 secondary           : '#2C2C2C',
                 urgencies           : '#C92D2D',

@@ -14,9 +14,9 @@ class Features extends Component
      * @param  mixed  $features
      * @return void
      */
-    public function __construct($features)
+    public function __construct()
     {
-        $this->features = $features;
+        
     }
 
     /**

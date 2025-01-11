@@ -54,6 +54,9 @@
     }
 }
 #contact{
+    .form svg{
+        @apply w-4 fill-gray_500;
+    }
 }
 
 .big-text{

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\HomeHeroBanner;
-use App\Models\Feature;
 use App\Models\Service;
 use Illuminate\Http\Request;
 

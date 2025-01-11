@@ -13,9 +13,11 @@
     }
 }
 .btn-primary{
-    @apply bg-primary;
+    @apply bg-primary hover:bg-primary_hover;
 }
 
 .btn-urgencies{
-    @apply bg-urgencies;
+    @apply bg-urgencies 
+    hover:bg-urgencies_hover
+    hover:text-white;
 }

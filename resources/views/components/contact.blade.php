@@ -1,23 +1,43 @@
-<div class="flex" id="contact">
-    <div class="container py-12 sm:w-1/2 bg-primary_light">
-        <div class="max-w-2xl m-auto flex flex-col gap-6">
+<div class="flex">
+    <div class="container py-12 lg:py-24 sm:w-1/2 bg-primary_light">
+        <div class="max-w-2xl m-auto flex flex-col gap-6" id="contact">
             <div class="flex flex-col gap-6">
                 <h3>H3 - Headline</h3>
-                <p class="mobile_text_large">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <form id="contactForm" action="{{ route('contact.store') }}" method="post" class="form">
                 @csrf
                 <div class="flex flex-col gap-6 w-full">
-                    <input id="nameInput" type="text" name="name" placeholder="Su nombre" required>
-                    <input id="emailInput" type="email" name="email" placeholder="Su correo electrónico" required>
-                    <input id="phoneInput" type="tel" name="phone" placeholder="Su teléfono" required pattern="[0-9]{9}">
-                    <select id="serviceInput" name="service" required>
-                        <option value="">¿Qué necesita?</option>
-                        <option value="Cerrajería">Cerrajería</option>
-                        <option value="Electricidad">Electricidad</option>
-                        <option value="Fontanería">Fontanería</option>
-                        <option value="Persianas">Persianas</option>
-                    </select>
+                    <div class="relative">
+                        <input id="nameInput" type="text" name="name" placeholder="Su nombre" required class="pl-10 w-full">
+                        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <x-icons.user />
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <input id="emailInput" type="email" name="email" placeholder="Su correo electrónico" required class="pl-10 w-full">
+                        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <x-icons.mail />
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <input id="phoneInput" type="tel" name="phone" placeholder="Su teléfono" required pattern="[0-9]{9}" class="pl-10 w-full">
+                        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <x-icons.phone />
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <select id="serviceInput" name="service" required class="pl-10 w-full">
+                            <option value="">¿Qué necesita?</option>
+                            <option value="Cerrajería">Cerrajería</option>
+                            <option value="Electricidad">Electricidad</option>
+                            <option value="Fontanería">Fontanería</option>
+                            <option value="Persianas">Persianas</option>
+                        </select>
+                        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <x-icons.tool />
+                        </div>
+                    </div>
                     
                     <!-- Casilla de verificación para Términos y Política -->
                     <div class="flex items-start gap-2">
