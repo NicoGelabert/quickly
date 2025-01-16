@@ -12,10 +12,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('features', function (Blueprint $table) {
             $table->id();
-            $table->text('title', 50);
-            $table->text('slug', 50);
+            $table->text('title', 100);
+            $table->text('slug', 100)->nullable();
             $table->string('image', 2000)->nullable();
             $table->string('image_mime')->nullable();
             $table->integer('image_size')->nullable();
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('features');
     }
 };

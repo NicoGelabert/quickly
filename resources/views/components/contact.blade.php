@@ -2,31 +2,31 @@
     <div class="container py-12 lg:py-24 sm:w-1/2 bg-primary_light">
         <div class="max-w-2xl m-auto flex flex-col gap-6" id="contact">
             <div class="flex flex-col gap-6">
-                <h3>H3 - Headline</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>Contáctanos</h3>
+                <p>Completa el formulario y recibe un 15% de descuento!</p>
             </div>
             <form id="contactForm" action="{{ route('contact.store') }}" method="post" class="form">
                 @csrf
                 <div class="flex flex-col gap-6 w-full">
-                    <div class="relative">
+                    <div class="relative input">
                         <input id="nameInput" type="text" name="name" placeholder="Su nombre" required class="pl-10 w-full">
                         <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                             <x-icons.user />
                         </div>
                     </div>
-                    <div class="relative">
+                    <div class="relative input">
                         <input id="emailInput" type="email" name="email" placeholder="Su correo electrónico" required class="pl-10 w-full">
                         <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                             <x-icons.mail />
                         </div>
                     </div>
-                    <div class="relative">
+                    <div class="relative input">
                         <input id="phoneInput" type="tel" name="phone" placeholder="Su teléfono" required pattern="[0-9]{9}" class="pl-10 w-full">
                         <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                             <x-icons.phone />
                         </div>
                     </div>
-                    <div class="relative">
+                    <div class="relative input">
                         <select id="serviceInput" name="service" required class="pl-10 w-full">
                             <option value="">¿Qué necesita?</option>
                             <option value="Cerrajería">Cerrajería</option>

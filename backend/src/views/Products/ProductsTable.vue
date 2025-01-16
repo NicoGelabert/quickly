@@ -37,9 +37,9 @@
                            @click="sortProducts('price')">
             Price
           </TableHeaderCell> -->
-          <TableHeaderCell field="quantity" :sort-field="sortField" :sort-direction="sortDirection"
-                           @click="sortProducts('quantity')">
-            Quantity
+          <TableHeaderCell field="product.categories" :sort-field="sortField" :sort-direction="sortDirection"
+                           @click="sortProducts('product.categories')">
+            Category
           </TableHeaderCell>
           <TableHeaderCell field="updated_at" :sort-field="sortField" :sort-direction="sortDirection"
                            @click="sortProducts('updated_at')">
@@ -74,7 +74,7 @@
             {{ $filters.currencyUSD(product.price) }}
           </td> -->
           <td class="border-b p-2">
-            {{ product.quantity }}
+            {{ product.categories.map(category => category.name).join(', ') }}
           </td>
           <td class="border-b p-2 ">
             {{ product.updated_at }}

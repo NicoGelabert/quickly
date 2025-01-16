@@ -11,6 +11,6 @@ class HomeHeroBanner extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['image', 'image_mime', 'image_size', 'headline', 'description', 'link', 'background', 'created_by', 'updated_by'];
+    protected $fillable = ['image', 'image_mime', 'image_size', 'headline', 'description', 'link', 'service', 'title', 'created_by', 'updated_by'];
 
 }

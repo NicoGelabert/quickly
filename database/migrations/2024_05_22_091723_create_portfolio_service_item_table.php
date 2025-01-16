@@ -12,15 +12,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('portfolio_service_item', function (Blueprint $table) {
             $table->id();
-            $table->text('title', 50);
-            $table->text('slug', 50);
-            $table->string('image', 2000)->nullable();
-            $table->string('image_mime')->nullable();
-            $table->integer('image_size')->nullable();
-            $table->longText('description')->nullable();
-            $table->boolean('published')->default(true);
+            $table->foreignId('portfolio_id')->constrained()->onDelete('cascade');
+            $table->foreignId('service_item_id')->constrained()->onDelete('cascade');
             $table->foreignIdFor(User::class, 'created_by')->nullable();
             $table->foreignIdFor(User::class, 'updated_by')->nullable();
             $table->softDeletes();
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('portfolio_service_item');
     }
 };

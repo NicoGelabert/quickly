@@ -6,14 +6,19 @@
     text-xs sm:text-sm md:text-base
     px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3;
     svg{
-        @apply h-auto
-        w-4
-        sm:w-5
-        md:w-6;
+        @apply h-auto fill-white
+        w-4 sm:w-5 md:w-6;
     }
 }
 .btn-primary{
     @apply bg-primary hover:bg-primary_hover;
+}
+
+.btn-secondary{
+    @apply bg-gray_100 hover:bg-gray_300 text-gray_800;
+    svg{
+        @apply fill-gray_800;
+    }
 }
 
 .btn-urgencies{

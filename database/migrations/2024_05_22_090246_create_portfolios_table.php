@@ -12,14 +12,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
-            $table->text('title', 50);
-            $table->text('slug', 50);
+            $table->text('title', 100);
+            $table->text('slug', 100)->nullable();
             $table->string('image', 2000)->nullable();
             $table->string('image_mime')->nullable();
             $table->integer('image_size')->nullable();
             $table->longText('description')->nullable();
+            $table->foreignId('client_id')->constrained()->onDelete('cascade');
+            $table->year('year')->nullable();
+            $table->string('link', 100)->nullable();
             $table->boolean('published')->default(true);
             $table->foreignIdFor(User::class, 'created_by')->nullable();
             $table->foreignIdFor(User::class, 'updated_by')->nullable();
@@ -34,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('portfolios');
     }
 };

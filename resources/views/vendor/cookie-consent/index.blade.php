@@ -5,11 +5,11 @@
             <p class="cookie-consent__message">
                 {!! trans('cookie-consent::texts.message') !!}
             </p>
-            <x-button class="js-cookie-consent-agree cookie-consent__agree cursor-pointer btn-primary">
-                <i class="fi fi-rr-arrow-right arrow-to-right"></i><span>{{ trans('cookie-consent::texts.agree') }}</span>
+            <x-button class="js-cookie-consent-agree cookie-consent__agree cursor-pointer btn btn-primary">
+                {{ trans('cookie-consent::texts.agree') }} <x-icons.send />
             </x-button>
-            <x-button class="js-cookie-consent-customize cookie-consent__customize cursor-pointer btn-primary">
-            <i class="fi fi-rr-arrow-right arrow-to-right"></i><span>{{ trans('cookie-consent::texts.customize') }}</span>
+            <x-button class="js-cookie-consent-customize cookie-consent__customize cursor-pointer btn btn-secondary">
+                {{ trans('cookie-consent::texts.customize') }} <x-icons.cookie />
             </x-button>
         </div>
     </div>
@@ -31,9 +31,9 @@
                     {{ trans('cookie-consent::texts.marketing-cookies') }}
                 </label>
             </form>
-            <div class="mt-4">
-                <x-button class="js-cookie-consent-save btn-primary" onclick="saveCookiePreferences()"><i class="fi fi-rr-arrow-right arrow-to-right"></i><span>{{ trans('cookie-consent::texts.save-preferences') }}</span></x-button>
-                <x-button class="js-cookie-consent-close btn-secondary" onclick="hideCustomizeDialog()">{{ trans('cookie-consent::texts.close') }}</x-button>
+            <div class="mt-4 flex gap-4">
+                <x-button class="js-cookie-consent-save btn btn-primary" onclick="saveCookiePreferences()">{{ trans('cookie-consent::texts.save-preferences') }} <x-icons.send /></x-button>
+                <x-button class="js-cookie-consent-close btn btn-secondary" onclick="hideCustomizeDialog()">{{ trans('cookie-consent::texts.close') }} <x-icons.close /></x-button>
             </div>
         </div>
     </div>

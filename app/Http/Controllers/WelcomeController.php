@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\HomeHeroBanner;
-use App\Models\Service;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -11,10 +11,10 @@ class WelcomeController extends Controller
     public function index()
     {
         $homeherobanners = HomeHeroBanner::all();
-        $services = Service::all();
+        $categories = Category::with('products.images')->get();
         return view('welcome', compact(
             'homeherobanners',
-            'services',
+            'categories',
         ));
     }
 }

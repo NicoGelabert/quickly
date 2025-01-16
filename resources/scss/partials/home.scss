@@ -32,6 +32,18 @@
 }
 
 #services{
+    #products_selected{
+        @apply flex flex-col gap-8;
+        ul{
+            @apply flex gap-4;
+            li{
+                @apply flex flex-col items-center gap-4;
+                img{
+                    @apply rounded-full max-w-32;
+                }
+            }
+        }
+    }
     ul li{
         .icon{
             @apply w-32 h-32 rounded-lg p-3 shadow-lg;
@@ -54,7 +66,7 @@
     }
 }
 #contact{
-    .form svg{
+    .form .input svg{
         @apply w-4 fill-gray_500;
     }
 }

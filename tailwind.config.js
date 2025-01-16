@@ -32,7 +32,7 @@ export default {
                 gray_400            : '#9CA3AF',
                 gray_500            : '#6C727F',
                 gray_600            : '#4E5562',
-                gray_700            : '#D85151',
+                gray_700            : '#333D4C',
                 gray_800            : '#1D2735',
                 gray_900            : '#030712',
                 gray_950            : '#030712',

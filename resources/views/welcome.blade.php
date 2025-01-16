@@ -4,7 +4,7 @@
     
     <hr class="divider" />
 
-    <x-services :services="$services" />
+    <x-categories :categories="$categories" />
 
     <x-contact />
 
