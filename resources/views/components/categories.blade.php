@@ -4,7 +4,7 @@
         <p class="mobile_text_large">Contacta con los prestadores de servicio y domina la urgencia.</p>
         
     </div>
-    <div class="md:w-1/2 flex justify-center lg:px-36">
+    <div class="md:w-1/2 flex justify-center max-w-72">
         <ul class="flex flex-wrap justify-evenly gap-6">
             @foreach ($categories as $category)
             <li class="w-fit flex flex-col gap-4 items-center">
