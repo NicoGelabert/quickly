@@ -45,7 +45,7 @@
 #products_selected{
     @apply flex flex-col items-center gap-8 pb-12;
     ul{
-        @apply flex flex-wrap justify-around gap-4 w-full;
+        @apply flex flex-wrap justify-center gap-8 lg:gap-16 w-full;
         li{
             @apply flex flex-col items-center gap-4;
             img{
