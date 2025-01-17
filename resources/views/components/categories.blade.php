@@ -1,11 +1,11 @@
 <div class="container py-12 lg:py-24 flex flex-col sm:flex-row-reverse gap-6 items-center" id="services">
-    <div class="flex flex-col gap-6 sm:w-1/2">
+    <div class="flex flex-col gap-4 sm:w-1/2">
         <h2>Profesionales en Fuengirola</h2>
         <p class="mobile_text_large">Contacta con los prestadores de servicio y domina la urgencia.</p>
-        <div id="products_selected"></div>
+        
     </div>
-    <div class="sm:w-1/2 flex justify-center">
-        <ul class="flex flex-wrap justify-evenly gap-6 max-w-72">
+    <div class="md:w-1/2 flex justify-center lg:px-36">
+        <ul class="flex flex-wrap justify-evenly gap-6">
             @foreach ($categories as $category)
             <li class="w-fit flex flex-col gap-4 items-center">
                 <button class="icon" onclick="showProducts({{ json_encode($category->products) }}, '{{ addslashes($category->name) }}')">
@@ -19,6 +19,7 @@
         </ul>
     </div>
 </div>
+<div id="products_selected" class="container"></div>
 
 <script>
     // Función para mostrar los productos
