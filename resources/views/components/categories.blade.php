@@ -1,9 +1,14 @@
-<div class="container py-12 lg:py-24 flex flex-col sm:flex-row-reverse gap-6 items-center" id="services">
-    <div class="flex flex-col gap-4 sm:w-1/2">
+<div class="container py-12 lg:py-24" id="services">
+    <div class="w-full flex flex-col gap-4 items-center">
         <h2>Profesionales en Fuengirola</h2>
         <p class="mobile_text_large">Contacta con los prestadores de servicio y domina la urgencia.</p>
         
     </div>
+    <div id="product-index" class="relative">
+        <product-list></product-list>
+    </div>
+</div>
+<!-- 
     <div class="md:w-1/2 flex justify-center max-w-72 mx-auto">
         <ul class="flex flex-wrap justify-evenly gap-6">
             @foreach ($categories as $category)
@@ -73,4 +78,4 @@
         // Insertar la lista en el div
         productsSelected.appendChild(ul);
     }
-</script>
+</script> -->

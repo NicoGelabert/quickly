@@ -1,4 +1,4 @@
-<x-app-demo>
+<x-app-layout>
     <div class="flex justify-center items-center backlogin py-32">
         <div class="bg-form">
             <form
@@ -31,7 +31,7 @@
                 <div class="flex flex-col">
                     <div class="">
                         <button
-                            class="btn-primary w-full"
+                            class="btn btn-primary w-fit"
                         >
                             {{ __('Sign up')}}
                         </button>
@@ -41,7 +41,7 @@
                         <p class="small font-bold">Si ya tienes cuenta</p>
                         <a
                             href="{{ route('login') }}"
-                            class="btn-secondary w-full block"
+                            class="btn btn-secondary w-fit block"
                         >
                             {{ __('Login')}}
                         </a>
@@ -50,4 +50,4 @@
             </form>
         </div>
     </div>
-</x-app-demo>
+</x-app-layout>

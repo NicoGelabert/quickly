@@ -4,9 +4,6 @@
 $primary-font: "Sen", sans-serif;
 $body-font: "Sen", sans-serif;
 
-a{
-    @apply hover:text-primary;
-}
 .logo svg{
     @apply h-auto w-32 transition-all;
 }

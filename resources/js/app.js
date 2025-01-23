@@ -5,6 +5,11 @@ import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse'
 import {get, post} from "./http.js";
 import 'flowbite';
+import ProductList from './components/products/ProductList.vue';
+
+const productIndex = createApp({});
+productIndex.component('product-list', ProductList);
+productIndex.mount('#product-index');
 
 Alpine.plugin(collapse)
 
